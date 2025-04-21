@@ -12,7 +12,13 @@
 
 :root {
   /* colors */
-  --background-color: white;
+  --primary: #221F20;
+  --secondary: #FFCC01;
+  --tertiary: #FFFFF;
+  --nav-background: #C9C9C9;
+  --grey: #333;
+
+  --background-color: var(--primary);
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
@@ -77,15 +83,20 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+}
+
+p { 
+  margin: auto;
+  color: var(--Army-white, #FFF);
+  font-family: "Source Sans Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 body.appear {
   display: block;
-}
-
-header {
-  height: var(--nav-height);
 }
 
 header .header,
@@ -118,16 +129,6 @@ h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
-
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-}
 
 code,
 pre {

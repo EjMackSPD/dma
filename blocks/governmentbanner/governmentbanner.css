@@ -1,0 +1,49 @@
+.governmentbanner-wrapper {
+  width: 100%;
+  display: inline-block;
+}
+
+.governmentbanner-wrapper img {
+  height: 11px;
+  width: 16px;
+}
+
+.governmentbanner.block > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  height: 26px;
+  background-color: var(--grey);
+  align-items: center;
+}
+
+.governmentbanner.block div > p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* optional spacing between image and text */
+  margin: 0;   /* remove default margin */
+}
+
+.governmentbanner.block > div:nth-child(1) div {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.governmentbanner.block > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color);
+  justify-content: center; /* centers items horizontally */
+  align-items: center;     /* centers items vertically */
+  gap: 2rem;               /* optional: adds spacing between the two inner divs */
+  max-width: 800px;
+}
+
+.governmentbanner.block > div:nth-child(2) img {
+  height: 60px;
+  width: 60px;
+}
+
+.governmentbanner.block > div:nth-child(2) img {
+  margin: 52px 0;
+}
+
