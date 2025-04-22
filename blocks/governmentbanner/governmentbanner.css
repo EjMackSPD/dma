@@ -34,8 +34,13 @@
   background-color: var(--background-color);
   justify-content: center; /* centers items horizontally */
   align-items: center;     /* centers items vertically */
-  gap: 2rem;               /* optional: adds spacing between the two inner divs */
-  max-width: 800px;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.governmentbanner.block > div:nth-child(2) > div:nth-child(2) {
+  width: 400px;
 }
 
 .governmentbanner.block > div:nth-child(2) img {
