@@ -29,7 +29,8 @@
 }
 
 .governmentbanner.block > div:nth-child(2) {
-  display: flex;
+  display: none;
+  visibility: none;
   flex-direction: row;
   background-color: var(--background-color);
   justify-content: center; /* centers items horizontally */

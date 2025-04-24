@@ -1,3 +1,7 @@
+.cards.block {
+  margin: 10px 0;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -7,13 +11,62 @@
   grid-gap: 24px;
 }
 
-.cards > ul > li {
+.cards.primary > ul,
+.cards.secondary > ul {
+  display: flex;
+  grid-template-columns: none;
+  grid-gap: none;
+  max-width: 1366px;
+}
+
+.cards.primary > ul > li,
+.cards.secondary > ul > li {
   border: 1px solid #dadada;
-  background-color: var(--background-color);
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+.cards.secondary > ul > li {
+  background-color: var(--primary);
+}
+
+.cards h2 {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 41px;
+  text-transform: uppercase;
+  padding: initial;
+  height: auto;
+}
+
+.cards.primary h2 {
+  color: var(--primary);
+  border-bottom: none;
+}
+
+.cards.secondary h2 {
+  color: var(--secondary);
+}
+
+.cards.primary p,
+.cards.secondary p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.2px;
+}
+
+.cards.primary p {
+  color: var(--primary);
+}
+
+.cards.secondary p {
+  color: var(--secondary);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 50px;
 }
 
 .cards .cards-card-image {
@@ -24,4 +77,71 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* Buttons */
+.cards.primary a.button:any-link,
+.cards.secondary a.button:any-link {
+  display: flex;
+  width: 178px;
+  height: 45px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  margin-top: 15px;
+  border: 1px solid;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cards.primary a.button:any-link {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.cards.primary a.button:hover {
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.cards.secondary a.button:any-link {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.cards.secondary a.button:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+/* Arrows */
+.cards.primary a.button::after,
+.cards.secondary a.button::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  margin-left: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  transition: background-image 0.3s ease;
+}
+
+.cards.primary a.button::after {
+  background-image: url("/icons/secondary-arrow.svg");
+}
+
+.cards.primary a.button:hover::after {
+  background-image: url("/icons/primary-arrow.svg");
+}
+
+.cards.secondary a.button::after {
+  background-image: url("/icons/primary-arrow.svg");
+}
+
+.cards.secondary a.button:hover::after {
+  background-image: url("/icons/secondary-arrow.svg");
 }
